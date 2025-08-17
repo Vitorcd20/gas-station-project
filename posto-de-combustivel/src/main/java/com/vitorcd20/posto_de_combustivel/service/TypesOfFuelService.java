@@ -33,7 +33,7 @@ public class TypesOfFuelService {
         typesOfFuelRepository.deleteById(id);
     }
 
-    public   void updateTypesOfFuel(Integer id, TypesOfFuel typesOfFuel) {
+    public  void updateTypesOfFuel(Integer id, TypesOfFuel typesOfFuel) {
 
         if (typesOfFuel.getId() == null) {
             throw new IllegalArgumentException("type of fuel ID cannot be null for update");

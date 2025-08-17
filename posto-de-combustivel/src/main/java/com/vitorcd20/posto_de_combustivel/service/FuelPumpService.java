@@ -1,7 +1,6 @@
 package com.vitorcd20.posto_de_combustivel.service;
 
 import com.vitorcd20.posto_de_combustivel.infrastructure.entities.FuelPumps;
-import com.vitorcd20.posto_de_combustivel.infrastructure.entities.TypesOfFuel;
 import com.vitorcd20.posto_de_combustivel.infrastructure.entities.repositories.FuelPumpsRepository;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
@@ -32,7 +31,7 @@ public class FuelPumpService {
         fuelPumpsRepository.deleteById(id);
     }
 
-    public   void updateFuelPump(FuelPumps fuelPumps) {
+    public   void updateFuelPump(Integer id, FuelPumps fuelPumps) {
 
         if (fuelPumps.getId() == null) {
             throw new IllegalArgumentException("Fuel pump ID cannot be null for update");
